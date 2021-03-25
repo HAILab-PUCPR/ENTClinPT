@@ -28,9 +28,13 @@ python app.py
 
 O primeiro acesso pode ser mais lento, já que o(s) modelo(s) de NER serão baixados do repositório [HuggingFaces](https://huggingface.co/pucpr/clininalnerpt-finding).
 
+5. Escreve uma sentença clínica ou selecione alguma frase de exemplo e clicar no botão de pesquisa (lupa). Serão retornadas as entidades clínicas identificadas na sentença de entrada. Acommpanhe as cores pela legenda.
+
 <img src=img/entclinpt1.jpg">
 
 <img src="img/entclinpt2.jpg">
+
+Output da API:
 
 <img src="img/entclinpt3.jpg">
 
