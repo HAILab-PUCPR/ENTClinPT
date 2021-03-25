@@ -2,6 +2,11 @@
 
 ** *trabalho em andamento* **
 
+# Table of Contents
+1. [Como executar localmente](#Como executar)
+2. [Executando via docker](#Executando via docker)
+3. [Como citar](#Como citar)
+
 ## Como executar
 1. Clone o repositório
 2. Instale as biblitecas necessárias (se preferir, use [Anaconda](anaconda.com))
@@ -24,3 +29,11 @@ python app.py
 <img src="https://github.com/lisaterumi/EntClinBr/blob/main/prints/entclinbr1.jpg">
 
 <img src="https://github.com/lisaterumi/EntClinBr/blob/main/prints/entclinbr2.jpg">
+
+## Executando via docker
+
+
+
+## Como citar
+
+* em breve *
