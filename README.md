@@ -34,9 +34,13 @@ Serão retornadas as entidades clínicas identificadas na sentença de entrada. 
 
 <img src="img/entclinpt2.jpg">
 
+<img src=img/entclinpt3.jpg">
+
+<img src="img/entclinpt4.jpg">
+
 Output da API:
 
-<img src="img/entclinpt3.jpg">
+<img src="img/entclinpt5.jpg">
 
 5. Selecionando outros tipos de entidade
 
