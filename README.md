@@ -55,6 +55,8 @@ Se você preferir, pode alterar o filtro alterando os arquivos diretamente dentr
 
 Para extrair as entidades dos tipos semânticos desejados, altere a lista ```MODELS_DIR``` no arquivo ```app.py```, indicando quais modelos de NER você deseja (por padrão configuramos o *finding* na imagem Docker). No arquivo ```predict_ner.py```, por favor altere a lista ```tags_values```, de acordo com o modelo escolhido.
 
+Em breve isso será melhorado.
+
 ## Como citar
 
 ** *em breve* **
