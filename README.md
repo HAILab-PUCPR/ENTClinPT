@@ -30,11 +30,11 @@ python app.py
  
 Serão retornadas as entidades clínicas identificadas na sentença de entrada. Acommpanhe as cores pela legenda. O primeiro acesso pode ser mais lento, já que o(s) modelo(s) de NER serão baixados do repositório [HuggingFaces](https://huggingface.co/pucpr/clininalnerpt-finding). Tenha um pouquinho de paciência :)
  
-<img src=img/entclinpt1.jpg">
+<img src="img/entclinpt1.jpg">
 
 <img src="img/entclinpt2.jpg">
 
-<img src=img/entclinpt3.jpg">
+<img src="img/entclinpt3.jpg">
 
 <img src="img/entclinpt4.jpg">
 
