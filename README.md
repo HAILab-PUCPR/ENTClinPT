@@ -3,9 +3,9 @@
 ** *trabalho em andamento* **
 
 # Table of Contents
-1. [Como executar localmente](#Como executar)
-2. [Executando via docker](#Executando via docker)
-3. [Como citar](#Como citar)
+1. [Como executar localmente](#como-executar)
+2. [Executando via docker](#executando-via-docker)
+3. [Como citar](#como-citar)
 
 ## Como executar
 1. Clone o repositório
@@ -32,7 +32,9 @@ python app.py
 
 ## Executando via docker
 
+ra que serve o Docker?
 
+O Docker serve para facilitar o dia a dia dos desenvolvedores e profissionais de infra, criando, de forma simplificada, um ambiente onde possam trabalhar alinhados com sua equipe e infraestrutura de servidores e fique simples criar e re-utilizar containers com “serviços” pré-configurados, simples de alterar e que possam ser versionados e mantidos através de simples arquivos de configuração.
 
 ## Como citar
 
