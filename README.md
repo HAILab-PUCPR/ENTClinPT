@@ -7,7 +7,7 @@
 2. [Executando via docker](#executando-via-docker)
 3. [Como citar](#como-citar)
 
-## Como executar
+## Como executar localmente
 1. Clone o repositório
 2. Instale as biblitecas necessárias (se preferir, use [Anaconda](anaconda.com))
 ```
@@ -30,12 +30,26 @@ python app.py
 
 <img src="https://github.com/lisaterumi/EntClinBr/blob/main/prints/entclinbr2.jpg">
 
-## Executando via docker
+## Executando via Docker
 
-ra que serve o Docker?
+1. Para executar a API dentro de um container Docker, onde não é necessário se preocupar com o ambiente e bibliotecas, basta obter a imagem através do comando:
 
-O Docker serve para facilitar o dia a dia dos desenvolvedores e profissionais de infra, criando, de forma simplificada, um ambiente onde possam trabalhar alinhados com sua equipe e infraestrutura de servidores e fique simples criar e re-utilizar containers com “serviços” pré-configurados, simples de alterar e que possam ser versionados e mantidos através de simples arquivos de configuração.
+```
+docker pull terumi/entclinpt:v1
+```
+Caso não possua, instale o Docker seguindo [essas orientações](https://docs.docker.com/get-started/).
+
+Para mais detalhes, visite a página do repositório no DockerHub: https://hub.docker.com/r/terumi/entclinpt
+
+2. Execute o seguinte comando (para executar o container na porta 5000)
+```
+docker run -o 0.0.0.0:5000:5000 terumi/entclinpt:v1
+```
+3. No navegador, acesse http://localhost:5000/
+
+Para extrair as entidades dos tipos semânticos desejados, altere a lista ```MODELS_DIR``` no arquivo ```app.py```, indicando quais modelos de NER você deseja (por padrão configuramos o *finding* na imagem Docker). No arquivo ```predict_ner.py```, por favor altere a lista ```tags_values```, de acordo com o modelo escolhido.
 
 ## Como citar
 
-* em breve *
+** *em breve* **
+
