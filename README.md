@@ -26,10 +26,10 @@ python app.py
 ```
 4. No navegador, acesse http://localhost:5000/
 
-O primeiro acesso pode ser mais lento, já que o(s) modelo(s) de NER serão baixados do repositório [HuggingFaces](https://huggingface.co/pucpr/clininalnerpt-finding).
-
-5. Escreve uma sentença clínica ou selecione alguma frase de exemplo e clicar no botão de pesquisa (lupa). Serão retornadas as entidades clínicas identificadas na sentença de entrada. Acommpanhe as cores pela legenda.
-
+5. Escreve uma sentença clínica ou selecione alguma frase de exemplo e clicar no botão de pesquisa (lupa). 
+ 
+Serão retornadas as entidades clínicas identificadas na sentença de entrada. Acommpanhe as cores pela legenda. O primeiro acesso pode ser mais lento, já que o(s) modelo(s) de NER serão baixados do repositório [HuggingFaces](https://huggingface.co/pucpr/clininalnerpt-finding). Tenha um pouquinho de paciência :)
+ 
 <img src=img/entclinpt1.jpg">
 
 <img src="img/entclinpt2.jpg">
