@@ -20,11 +20,13 @@ ou através do comnando:
 ```
 pip install -r requirements.txt
 ```
-3. Execute o app.py
+3. Execute o app.py (está configurado para rodar na porta 5000)
 ```
 python app.py
 ```
 4. No navegador, acesse http://localhost:5000/
+
+O primeiro acesso pode ser mais lento, já que o(s) modelo(s) de NER serão baixados do repositório [HuggingFaces](https://huggingface.co/pucpr/clininalnerpt-finding).
 
 <img src=img/entclinpt1.jpg">
 
