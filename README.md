@@ -32,6 +32,10 @@ python app.py
 
 <img src="img/entclinpt3.jpg">
 
+5. Selecionando outros tipos de entidade
+
+Para extrair as entidades dos tipos semânticos desejados, altere a lista ```MODELS_DIR``` no arquivo ```app.py```, indicando quais modelos de NER você deseja (por padrão configuramos o *finding* na imagem Docker). No arquivo ```predict_ner.py```, por favor altere a lista ```tags_values```, de acordo com o modelo escolhido.
+
 ## Executando via Docker
 
 1. Para executar a API dentro de um container Docker, onde não é necessário se preocupar com o ambiente e bibliotecas, basta obter a imagem através do comando:
@@ -49,13 +53,7 @@ docker run -o 0.0.0.0:5000:5000 terumi/entclinpt:v1
 ```
 3. No navegador, acesse http://localhost:5000/
 
-OBS: Configuramos a imagem para extrair entidades do tipo *Findings*, apenas como exemplo.
-
-Se você preferir, pode alterar o filtro alterando os arquivos diretamente dentro do container (usando ```docker exec -it```).
-
-Para extrair as entidades dos tipos semânticos desejados, altere a lista ```MODELS_DIR``` no arquivo ```app.py```, indicando quais modelos de NER você deseja (por padrão configuramos o *finding* na imagem Docker). No arquivo ```predict_ner.py```, por favor altere a lista ```tags_values```, de acordo com o modelo escolhido.
-
-Em breve isso será melhorado.
+OBS: Configuramos a imagem para extrair entidades do tipo *Findings*, apenas como exemplo. Se você está familizarizado com o comando ```docker exec -it```, pode alterar o filtro alterando os arquivos diretamente dentro do container, conforme as instruções do passo "Selecionando outros tipos de entidade". Em breve isso será melhorado.
 
 ## Como citar
 
