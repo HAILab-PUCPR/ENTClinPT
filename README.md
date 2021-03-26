@@ -2,7 +2,7 @@
 
 ** *trabalho em andamento* **
 
-# Table of Contents
+# Índice
 1. [Como executar localmente](#como-executar-localmente)
 2. [Executando via docker](#executando-via-docker)
 3. [Como citar](#como-citar)
