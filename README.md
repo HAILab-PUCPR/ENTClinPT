@@ -59,7 +59,7 @@ Para mais detalhes, visite a página do repositório no DockerHub: https://hub.d
 
 2. Execute o seguinte comando (para executar o container na porta 5000)
 ```
-docker run -o 0.0.0.0:5000:5000 terumi/entclinpt:v1
+docker run -p 0.0.0.0:5000:5000 terumi/entclinpt:v1
 ```
 3. No navegador, acesse http://localhost:5000/
 
