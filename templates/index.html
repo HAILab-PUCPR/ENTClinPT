@@ -51,6 +51,8 @@ body.loading .modal {
 		<option value="1">Cliente encaminhado ao CC para procedimento com neurocx. Colocada em névoa (...)</option>
 		<option value="2">Paciente com mesmo quadro neurológico, com abertura ocular espontânea, (...)</option>
 		<option value="3">AVC EM JUGULAR ESQUERDA, SEM SINAIS FLOGÍSTICOS, COM SOROTERAPIA (...)</option>
+		<option value="4">Paciente com Sepse pulmonar em D8 tazocin (...)</option>
+
 	  </select>
 	  </div>
 	  <br><br><br>
@@ -74,12 +76,13 @@ body.loading .modal {
 </body>
 <script>
 var dict = {};
-dict["Chemical&Drugs"] = "#FF0000"; // vermelho
+dict["ChemicalDrugs"] = "#FF0000"; // vermelho
 dict["DiagnosticProcedure"] = "#00FF00";  // verde claro
-dict["DiseaseorSyndrome"] = "#0000FF";  // azul 
-dict["Disorders"] = "#D7DF01";  // amarelo
+dict["DiseaseOrSyndrome"] = "#0000FF";  // azul 
+dict["Disorder"] = "#808000";  // oliva
 dict["Finding"] = "#58D3F7"; // azul claro 
-dict["HealthCare"] = "#FE2EF7"; // rosa 
+dict["HealthCareActivity"] = "#FE2EF7"; // rosa 
+/*
 dict["Laboratory"] = "#FF8000"; // laranja 
 dict["Medical"] = "#0B610B"; // verde escuro 
 dict["Pharmacologic"] = "#6A0888"; // lilas 
@@ -87,6 +90,7 @@ dict["Procedures"] = "#A4A4A4"; // cinza
 dict["Quantitative"] = "#04B486"; // azul esverdeado 
 dict["Sign"] = "#F5A9A9"; // vermelhor claro 
 dict["Therapeutic"] = "#A9BCF5"; // azul apagado 
+*/
 dict["Várias entidades"] = "#FFFF00"; // amarelo forte
 
 function colocaLegenda(){
@@ -96,7 +100,7 @@ function colocaLegenda(){
 	{
 		var nomeCor = Object.keys(dict)[k];
 		var cor = dict[Object.keys(dict)[k]];
-		textoDivLegenda = textoDivLegenda+nomeCor + " " + "<span style='background: "+cor+"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+		textoDivLegenda = textoDivLegenda+nomeCor + " " + "<span style='background: "+cor+"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br />";
 	}
 	textoDivLegenda =textoDivLegenda+"</div>";
 	//console.log(textoDivLegenda)
@@ -116,7 +120,7 @@ function retornaTextoDiv(retorno){
 		texto = texto.replaceAll("{","");
 		texto = texto.replaceAll("}","");
 		texto = texto.replaceAll("'","");
-
+		//console.log(texto)
 		var retorno3 = texto.split(/:/gm);
 		//console.log(retorno3[0])
 		//console.log(retorno3[1])
@@ -128,8 +132,13 @@ function retornaTextoDiv(retorno){
 			//{
 				if (retorno3[1].toString() != 'O'.toString()) // é tipo semantico
 				{
-					var cor = dict[retorno3[1]];
-					textoDiv += '<mark class="entity" style="background: '+cor+'; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;" title="'+retorno3[1]+'">'
+					classe = retorno3[1];
+					//console.log(p.replaceAll(regex, 'ferret'));
+					classe = classe.replace( /[B-I]-{1}/gm,'')
+					classe = classe.replace( /,/gm,', ')
+					//classe = classe.replace('B-','').replace('I-','')
+					var cor = dict[classe.trim()];
+					textoDiv += '<mark class="entity" style="background: '+cor+'; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;" title="'+classe.trim()+'">'
 					textoDiv += retorno3[0];
 					textoDiv += '</mark>';
 				}
@@ -145,7 +154,7 @@ function retornaTextoDiv(retorno){
 		
 	}
 	textoDiv = textoDiv+'</div>';
-	console.log(textoDiv);
+	//console.log(textoDiv);
 	document.getElementById("retorno").innerHTML = textoDiv;
 }
 
@@ -154,6 +163,7 @@ frases[0]="Paciente POI de cx de fx rádio distal, lúcido, verbalizando, eupné
 frases[1]="Cliente encaminhado ao CC para procedimento com neurocx. Colocada em névoa úmida no período, sem intercorrências. "
 frases[2]="Paciente com mesmo quadro neurológico, com abertura ocular espontânea, não contactuante, em uso de SNE com dieta, permanece aguardando familiares para orientações, pois já encontra-se de alta."
 frases[3]="AVC EM JUGULAR ESQUERDA, SEM SINAIS FLOGÍSTICOS, COM SOROTERAPIA EM CURSO. RELATA ELIMINAÇÕES VESICAIS E INTESTINAIS. RIM TRANSPLANTADO."
+frases[4]="Paciente com Sepse pulmonar em D8 tazocin (pciente não recebeu por 2 dias Atb). Dispneia venoso central em subclavia D duplolumen recebendo solução salina e glicosada em BI."
 
 $("#fraseExemplos").on("change", function(){
   //alert('mudou')

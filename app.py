@@ -9,19 +9,10 @@ app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 
 MODELS_DIR = [
-              "pucpr/clininalnerpt-finding"
-              #,"pucpr/clininalnerpt-chemical"
-              #,"pucpr/clininalnerpt-diagnostic"
-              #,"pucpr/clininalnerpt-procedures"
-              #,"pucpr/clininalnerpt-disease"
-              #,"pucpr/clininalnerpt-disorders"
-              #,"pucpr/clininalnerpt-healthcare"
-              #,"pucpr/clininalnerpt-laboratory"
-              #,"pucpr/clininalnerpt-medical"
-              #,"pucpr/clininalnerpt-pharmacologic"
-              #,"pucpr/clininalnerpt-quantitative"
-              #,"pucpr/clininalnerpt-sign"
-              #,"pucpr/clininalnerpt-therapeutic"
+              r"/home/terumi/Documents/NER_BioBERTpt/scripts/model10_drugsepocas"
+              ,r"/home/terumi/Documents/NER_BioBERTpt/scripts/model10epocas_DiagnosticProcedureDados"
+              ,r"/home/terumi/Documents/NER_BioBERTpt/scripts/model10epocas_DiseaseSyndromeDados"             
+              ,r"/home/terumi/Documents/NER_BioBERTpt/scripts/model10epocas_HealthCareActivityDados"             
 ]
 
 
@@ -35,8 +26,11 @@ def index():
 
 @app.route("/entidades")
 def ner():
-    SentencasSomente = [request.args.get('word')]
-    result = predict.predictALLSentenceBERT(SentencasSomente,MODELS_DIR)
+    SentencasSomente = request.args.get('word')
+    SentencasSomente = SentencasSomente.replace('.','.#')
+    sentencas = SentencasSomente.split('#')
+    print(sentencas)
+    result = predict.predictALLSentenceBERT(sentencas,MODELS_DIR)
     return jsonify(result)
 
 #app.run()
