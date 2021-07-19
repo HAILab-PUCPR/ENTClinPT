@@ -8,13 +8,29 @@ import predict_ner as predict
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 
+'''
 MODELS_DIR = [
               r"/home/terumi/Documents/NER_BioBERTpt/scripts/model10_drugsepocas"
               ,r"/home/terumi/Documents/NER_BioBERTpt/scripts/model10epocas_DiagnosticProcedureDados"
               ,r"/home/terumi/Documents/NER_BioBERTpt/scripts/model10epocas_DiseaseSyndromeDados"             
               ,r"/home/terumi/Documents/NER_BioBERTpt/scripts/model10epocas_HealthCareActivityDados"             
 ]
-
+'''
+MODELS_DIR = [
+              r"pucpr/clinicalnerpt-chemical"
+              ,r"pucpr/clinicalnerpt-diagnostic"
+              ,r"pucpr/clinicalnerpt-disease"             
+              ,r"pucpr/clinicalnerpt-disorder"             
+              ,r"pucpr/clinicalnerpt-finding"             
+              ,r"pucpr/clinicalnerpt-healthcare"             
+              ,r"pucpr/clinicalnerpt-laboratory"             
+              ,r"pucpr/clinicalnerpt-medical"             
+              ,r"pucpr/clinicalnerpt-pharmacologic"             
+              ,r"pucpr/clinicalnerpt-procedure"             
+              ,r"pucpr/clinicalnerpt-quantitative"             
+              ,r"pucpr/clinicalnerpt-sign"             
+              ,r"pucpr/clinicalnerpt-therapeutic"             
+]
 
 
 
