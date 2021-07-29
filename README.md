@@ -3,9 +3,20 @@
 ** *trabalho em andamento* **
 
 # Índice
-1. [Como executar localmente](#como-executar-localmente)
-2. [Executando via docker](#executando-via-docker)
-3. [Como citar](#como-citar)
+1. [Modelos de NER](#modelos-de-ner)
+2. [Como executar localmente](#como-executar-localmente)
+3. [Executando via docker](#executando-via-docker)
+4. [Como citar](#como-citar)
+
+## Modelos de NER
+
+Vamos usar os modelos de NER treinados no projeto [BioBERTpt](https://github.com/HAILab-PUCPR/BioBERTpt). São 13 modelos, um para cada tipo semântico: Disorders, Chemicals and Drugs, Medical Procedure, Diagnostic Procedure, Disease Or Syndrome, Findings, Health Care Activity, Laboratory or Test Result, Medical Device, Pharmacologic Substance, Quantitative Concept, Sign or Symptom and Therapeutic or Preventive Procedure.
+
+Todos os modelos estão publicamente disponíveis no repositório [Hugging Faces](https://huggingface.co/pucpr/).
+
+Se os modelos forem úteis de alguma forma, adoraríamos receber um like ❤️
+
+<img src="./images/like-biobertpt-diagnostic.jpg" alt="BioBERTpt - Diagnostic">
 
 ## Como executar localmente
 1. Clone o repositório
