@@ -16,7 +16,7 @@ Todos os modelos estão publicamente disponíveis no repositório [Hugging Faces
 
 Se os modelos forem úteis de alguma forma, adoraríamos receber um like ❤️
 
-<img src="./images/like-biobertpt-diagnostic.jpg" alt="BioBERTpt - Diagnostic">
+<img src="./img/like-biobertpt-diagnostic.jpg" alt="BioBERTpt - Diagnostic">
 
 ## Como executar localmente
 1. Clone o repositório
